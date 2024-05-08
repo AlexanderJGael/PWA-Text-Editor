@@ -32,13 +32,13 @@ export const getDb = async () => {
   const store = await dbStore();
   const result = await store.getAll();
 
-  if (!result) {
+  if (!result || result.length === null) {
     console.log('No data found in database');
-    return;
+    return null;
   }
   
   console.log('content retrived from database');
-  return result;
+  return result[0].value;
 };
 
 initdb();
