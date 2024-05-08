@@ -2,7 +2,7 @@
   "name": "JATE",
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run build && concurrently \"npm run client\" \"npm run server\"",
     "server": "cd server && npm run server",
     "build": "npm run install:all && cd client && npm run build",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
