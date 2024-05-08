@@ -4,9 +4,9 @@
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run server",
-    "build": "cd client && npm run build",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "client": "cd client && npm start"
+    "build": "npm run install:all && cd client && npm run build",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "client": "cd client && npm run start"
   },
   "author": "2U",
   "license": "UNLICENSED",
