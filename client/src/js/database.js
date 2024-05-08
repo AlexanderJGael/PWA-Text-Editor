@@ -22,7 +22,7 @@ const dbStore = async () => {
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
     const store = await dbStore();
-    const result = await store.put({ id: 1, content: content});
+    const result = await store.put({ id: 1, value: content});
 
     console.log('Data saved to database', result);
 };
@@ -31,10 +31,14 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   const store = await dbStore();
   const result = await store.getAll();
-  const content = result[0].content;
 
+  if (!result) {
+    console.log('No data found in database');
+    return;
+  }
+  
   console.log('content retrived from database');
-  return content;
+  return result;
 };
 
 initdb();
