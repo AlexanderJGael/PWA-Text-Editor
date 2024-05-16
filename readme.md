@@ -29,7 +29,7 @@ Click [Here](https://jate-i2ev.onrender.com/) to view the deployed app.
 4. Open the application in your browser
 
 ## Deployment
-The application is deployed to Render. Visit [Render Deployment Guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/render/render-deployment-guide) for deployment instructions.
+The application is deployed to Render.
 
 ## Usage
 1. Open the application in your browser
