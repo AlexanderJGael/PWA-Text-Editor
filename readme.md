@@ -1,5 +1,9 @@
 # Text Editor PWA
 
+## Demo
+
+jate_demo.png
+
 ## Description
 This is a progressive web application (PWA) that serves as a text editor, allowing users to create and edit notes or code snippets with or without an internet connection. The application features data persistence using IndexedDB, ensuring content is saved and retrieved even offline.
 
